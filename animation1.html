@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>菜单动画</title>
+    <style>
+        .father{
+            display: flex;
+            justify-content: center;
+        }
+        .head{
+            font-size:24px;
+            font-family: "Microsoft YaHei";
+            margin-top: 100px;
+        }
+        .animation{
+            width: 0px;
+            height:2px;
+            background: aqua;
+            margin: 5px auto;
+            transition: all 1s;
+            -moz-transition: all 1s;
+            -webkit-transition: all 1s;
+            -o-transition:all 1s;
+        }
+        .change{
+            font-size: 20px;
+            border-radius:7px;
+            background: aliceblue;
+            border: darkgray 0.5px solid;
+            outline:none;
+            margin-top: 20px;
+        }
+        .change:active{
+            background: aquamarine;
+        }
+    </style>
+</head>
+<body>
+<div class="father">
+    <div class="son">
+        <div class="head" id="head">前端学院</div>
+        <div class="animation" id="animation"></div>
+        <button class="change" id="change">切换样式</button>
+    </div>
+</div>
+<script>
+        var i = 0;
+            document.getElementById("change").onclick = function () {
+                if (i % 2 == 0) {
+                    document.getElementById("head").style.color="aqua";
+                document.getElementById("animation").style.width = "100px";
+                i++;
+            }
+                else{
+                        document.getElementById("animation").style.width = "0px";
+                    document.getElementById("head").style.color="black";
+                        i++;
+                }
+        }
+</script>
+</body>
+</html>
