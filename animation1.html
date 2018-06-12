@@ -9,30 +9,33 @@
             justify-content: center;
         }
         .head{
-            font-size:24px;
-            font-family: "Microsoft YaHei";
+            font-size:23px;
+            font-family: "SimHei";
             margin-top: 100px;
+            font-weight: bold;
         }
         .animation{
             width: 0px;
-            height:2px;
-            background: aqua;
-            margin: 5px auto;
-            transition: all 1s;
-            -moz-transition: all 1s;
-            -webkit-transition: all 1s;
-            -o-transition:all 1s;
+            height:3.5px;
+            background: #5452d4;
+            margin: 10px auto;
+            transition: all 0.3s;
+            -moz-transition: all 0.3s;
+            -webkit-transition: all 0.3s;
+            -o-transition:all 0.3s;
         }
         .change{
             font-size: 20px;
+            background: rgb(255,255,255);
             border-radius:7px;
-            background: aliceblue;
             border: darkgray 0.5px solid;
             outline:none;
-            margin-top: 20px;
+            margin-top: 35px;
+            font-family: "SimHei";
+            font-weight: bold;
         }
         .change:active{
-            background: aquamarine;
+            background: #5452d4;
         }
     </style>
 </head>
@@ -48,8 +51,8 @@
         var i = 0;
             document.getElementById("change").onclick = function () {
                 if (i % 2 == 0) {
-                    document.getElementById("head").style.color="aqua";
-                document.getElementById("animation").style.width = "100px";
+                    document.getElementById("head").style.color="#5452d4";
+                document.getElementById("animation").style.width = "95px";
                 i++;
             }
                 else{
